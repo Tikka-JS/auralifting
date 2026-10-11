@@ -713,8 +713,35 @@ footer p {
 }
 
 @media (max-width: 900px) {
+    
+.header {
+        height: auto;
+        padding: 20px 0;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    .brand {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .header > .btn-small {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: end;
+    }
+
     .nav {
-        display: none;
+        grid-column: 1 / -1;
+        grid-row: 2;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px 24px;
+        width: 100%;
     }
 
     .hero,
@@ -772,9 +799,6 @@ footer p {
         height: 72px;
     }
 
-    .header .btn-small {
-        display: none;
-    }
 
     .hero h1 {
         font-size: 53px;
